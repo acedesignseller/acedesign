@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AceDesign</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  
+  <header class="header">
+  <div class="logo">Ace<span>Design</span></div>
+
+  <!-- Search Bar -->
+  <div class="search-bar">
+    <input type="text" placeholder="Search..." />
+    <button type="submit">🔍</button>
+  </div>
+
+  <nav class="nav">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Portfolio</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+  
+  <script>
+    function toggleMenu() {
+      document.getElementById("nav-links").classList.toggle("open");
+    }
+    <!-- Login / Signup Buttons -->
+  <div class="auth-buttons">
+    <a href="#" class="login-btn">Login</a>
+    <a href="#" class="signup-btn">Sign Up</a>
+  </div>
+</header>
+  </script>
+ <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Designs That <span>Inspire</span></h1>
+      <p>Design Loud. Stand proud.</p>
+      <div class="hero-buttons">
+        <a href="#" class="btn primary">Get Started</a>
+        <a href="#" class="btn secondary">View Portfolio</a>
+      </div>
+    </div>
+  </section>
+  
+   <!-- Featured & Highlights Section -->
+  <section class="featured">
+    <div class="section-title">
+      <h2>Why Choose <span>AceDesign</span>?</h2>
+      <p>We deliver creativity, strategy, and innovation that makes brands shine.</p>
+    </div>
+
+    <div class="highlights">
+      <div class="highlight-card">
+        <h3>50+</h3>
+        <p>Successful Projects</p>
+      </div>
+      <div class="highlight-card">
+        <h3>30+</h3>
+        <p>Happy Clients</p>
+      </div>
+      <div class="highlight-card">
+        <h3>5</h3>
+        <p>Industry Awards</p>
+      </div>
+      <div class="highlight-card">
+        <h3>100%</h3>
+        <p>Client Satisfaction</p>
+      </div>
+    </div>
+  </section>
+  
+   <section class="menu-preview">
+  <h2>Our Work</h2>
+  <p>Explore some of our featured design projects.</p>
+
+  <div class="menu-grid">
+    <div class="menu-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8sb4c--rR3sV_aGkw0MWYEuejwX-u02gfCQ&s">
+      <h3>Brand Identity</h3>
+      <p>Creative logo & visual guidelines</p>
+    </div>
+
+    <div class="menu-card">
+      <img src="https://images.ctfassets.net/wowgx05xsdrr/Jbh4DUqldGkgynKTXBR31/696b52a52dde81b1de7dce7992495921/dropshipping-hero.png">
+      <h3>UI/UX Design</h3>
+      <p>Modern and user-friendly designs</p>
+    </div>
+
+    <div class="menu-card">
+      <img src="https://m.media-amazon.com/images/I/61eWoBzwgkL._UF1000,1000_QL80_.jpg">
+      <h3>Packaging</h3>
+      <p>Creative and sustainable packaging</p>
+    </div>
+
+    <div class="menu-card">
+      <img src="https://www.proalley.com/blog/content/images/2022/11/web-design-concept-with-drawings.jpg">
+      <h3>Web Design</h3>
+      <p>Responsive websites for all devices</p>
+    </div>
+  </div>
+</section>
+
+  
+  <section class="services-section">
+  <h2>Our Services</h2>
+  <p>Creative logo & visual guidelines</p>
+<!-- Centered image -->
+  <div class="services-image">
+    <img src="https://i.ibb.co/RGxk5kYg/Screenshot-2025-09-19-034735.png" alt="Services Banner">
+  </div>
+
+  <div class="services-container">
+  
+  </div>
+</section>
+
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AceDesign</title>
+  <link rel="stylesheet" href="offer.css">
+</head>
+<body>
+  
+  <!-- Limited-Time Offer Section -->
+  <section class="offer">
+    <div class="offer-content">
+      <h2>🔥 Limited-Time Offer</h2>
+      <p>Get 30% OFF on all design packages. Hurry up, the deal ends soon!</p>
+
+      <div class="countdown">
+        <div class="time-box">
+          <span id="days">00</span>
+          <p>Days</p>
+        </div>
+        <div class="time-box">
+          <span id="hours">00</span>
+          <p>Hours</p>
+        </div>
+        <div class="time-box">
+          <span id="minutes">00</span>
+          <p>Minutes</p>
+        </div>
+        <div class="time-box">
+          <span id="seconds">00</span>
+          <p>Seconds</p>
+        </div>
+      </div>
+
+      <a href="#" class="btn-offer">Claim Offer</a>
+    </div>
+  </section>
+
+  <!-- Countdown Script -->
+  <script>
+    // Set offer end date (example: 7 days from now)
+    const offerEnd = new Date().getTime() + (7 * 24 * 60 * 60 * 1000);
+
+    const timer = setInterval(function() {
+      const now = new Date().getTime();
+      const distance = offerEnd - now;
+
+      if (distance < 0) {
+        clearInterval(timer);
+        document.querySelector(".countdown").innerHTML = "<p>Offer Expired</p>";
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("days").innerText = days;
+      document.getElementById("hours").innerText = hours;
+      document.getElementById("minutes").innerText = minutes;
+      document.getElementById("seconds").innerText = seconds;
+    }, 1000);
+  </script>
+
+   <!-- Location & Delivery Section -->
+  <section class="location-delivery">
+    <div class="location-content">
+      <h2>📍 Our Location & Delivery</h2>
+      <p>Visit us at our studio or enjoy fast delivery right to your doorstep.  
+      We cover all major cities and towns across the region.</p>
+
+      <ul class="delivery-points">
+        <li>✔ Free delivery in city center</li>
+        <li>✔ Nationwide shipping available</li>
+        <li>✔ Express 24-hour service</li>
+      </ul>
+
+      <a href="#" class="btn-delivery">Check Delivery Availability</a>
+    </div>
+
+    <div class="location-map">
+      <!-- Google Maps Embed Example -->
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24158.21874716625!2d-74.006015!3d40.712728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQyJzQ2LjgiTiA3NMKwMDAnMjEuNSJX!5e0!3m2!1sen!2sus!4v1632958871540!5m2!1sen!2sus" 
+        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+      </iframe>
+    </div>
+  </section>
+  
+  <!-- Testimonials Section -->
+  <section class="testimonials">
+    <div class="testimonials-header">
+      <h2>⭐ What Our Clients Say</h2>
+      <p>Real stories from businesses that trusted AceDesign</p>
+    </div>
+
+    <div class="testimonial-grid">
+
+      <!-- Review 1 -->
+      <div class="testimonial-card">
+        <div class="reviewer">
+          <img src="https://i.pravatar.cc/100?img=12" alt="Client 1">
+          <h3>Sarah Johnson</h3>
+          <p>Brand Manager</p>
+        </div>
+        <p class="review-text">"AceDesign completely transformed our brand identity. The new look boosted our sales by 40% in just 3 months!"</p>
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+      </div>
+
+      <!-- Review 2 -->
+      <div class="testimonial-card">
+        <div class="reviewer">
+          <img src="https://i.pravatar.cc/100?img=32" alt="Client 2">
+          <h3>Michael Smith</h3>
+          <p>Startup Founder</p>
+        </div>
+        <p class="review-text">"Their team is professional, creative, and fast. The website they built for us is stunning and responsive."</p>
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+      </div>
+
+      <!-- Review 3 -->
+      <div class="testimonial-card">
+        <div class="reviewer">
+          <img src="https://i.pravatar.cc/100?img=45" alt="Client 3">
+          <h3>Amanda Lee</h3>
+          <p>Marketing Director</p>
+        </div>
+        <p class="review-text">"Working with AceDesign was smooth and enjoyable. We’ll definitely hire them again for our next big project."</p>
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+      </div>
+
+    </div>
+  </section>
+  
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="footer-container">
+
+      <!-- Company Info -->
+      <div class="footer-about">
+        <h2>AceDesign</h2>
+        <p>Creative design solutions for brands that want to stand out.  
+        From logos to websites — we bring ideas to life.</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="footer-contact">
+        <h3>Contact</h3>
+        <p><i class="fa-solid fa-location-dot"></i> 123 Creative Street, canada</p>
+        <p><i class="fa-solid fa-phone"></i> +1 (437) 929-5265</p>
+        <p><i class="fa-solid fa-envelope"></i> Ordersacedesigns@gmail.com</p>
+      </div>
+
+      <!-- Social Media -->
+<div class="footer-social">
+  <h3>Follow Us</h3>
+  <div class="social-icons">
+    <a href="#">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiXN9xSEe8unzPBEQOeAKXd9Q55efGHGB9BA&s" alt="Facebook">
+    </a>
+    <a href="#">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Logo_of_Twitter.svg/2491px-Logo_of_Twitter.svg.png" alt="Twitter">
+    </a>
+    <a href="#">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqPhu9abiw3ay9y2OzkxvyNHMVZR8W2gC1qw&s" alt="Instagram">
+    </a>
+    <a href="#">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/960px-LinkedIn_logo_initials.png" alt="LinkedIn">
+    </a>
+  </div>
+</div>
+
+
+    <!-- Bottom Line -->
+    <div class="footer-bottom">
+      <p>© 2025 AceDesign. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
